@@ -1,0 +1,69 @@
+body {
+  background-color: #ACDEFB;
+  text-align: center;
+}
+
+a {
+  color: #063A59;
+}
+
+#G {
+  color: red;
+}
+#o {
+  color: green;
+}
+#r {
+  color: black;
+}
+#i {
+  color: orange;
+}
+#l {
+  color: blue;
+}
+#l2 {
+  color: gray;
+}
+#a {
+  color: yellow;
+}
+
+#GorillaHeader {
+  text-align: center;
+  font-family: "Verdana"; 
+  font-size: 22px;
+}
+
+
+/* sourced from https://www.w3schools.com/css/css_align.asp */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#kindGorilla {
+  height: 25%;
+  width: 25%
+}
+
+table {
+  margin: auto;
+  margin-top: 20px;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  border: 1px dashed black;
+  padding: 10px;
+  font-weight: bold;
+}
+
+th {
+  background-color: #784A8E;
+  font-size: 16px;
+  color: white;
+}
