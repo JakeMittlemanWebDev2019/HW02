@@ -166,9 +166,11 @@
    *      mathematical equation
    */
   function addEquals() {
-    var success = tryToEvaluate();
-    if (!success) {
-      expression = expression.concat("+");
+    if (!isLastOperator()) {
+      var success = tryToEvaluate();
+      if (!success) {
+        expression = expression.concat("+");
+      }
     }
   }
   
@@ -183,15 +185,17 @@
    *      and display
    */
   function sub() {
-    var success = tryToEvaluate();
+    if (!isLastOperator()) {
+      var success = tryToEvaluate();
 
-    if (!success) {
-      if (!isLastOperator()) {
-        expression = expression.concat("-");  
-      } 
-    }
-    else {
-      expression = expression.concat("-");
+      if (!success) {
+        if (!isLastOperator()) {
+          expression = expression.concat("-");  
+        } 
+      }
+      else {
+        expression = expression.concat("-");
+      }
     }
   }
 
@@ -205,16 +209,18 @@
    *      and display
    */
   function mul() { 
-    var success = tryToEvaluate();
-    
-    if (!success){
-      if (!isLastOperator()) {
+    if (!isLastOperator()) {
+      var success = tryToEvaluate();
+      
+      if (!success){
+        if (!isLastOperator()) {
+          expression = expression.concat("*");
+        }
+      }
+
+      else {
         expression = expression.concat("*");
       }
-    }
-
-    else {
-      expression = expression.concat("*");
     }
   }
 
@@ -229,16 +235,18 @@
    *      and display
    */
   function div() {
-    var success = tryToEvaluate();
-    
-    if (!success) {  
-      if (!isLastOperator()) {
+    if (!isLastOperator()) {
+      var success = tryToEvaluate();
+      
+      if (!success) {  
+        if (!isLastOperator()) {
+          expression = expression.concat("/");
+        }
+      }
+
+      else {
         expression = expression.concat("/");
       }
-    }
-
-    else {
-      expression = expression.concat("/");
     }
   }
 
